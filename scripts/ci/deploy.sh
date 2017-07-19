@@ -48,7 +48,7 @@ if [ "$ARGV_OPERATING_SYSTEM" == "linux" ]; then
   ./scripts/build/docker/run-command.sh \
     -r "$ARGV_ARCHITECTURE" \
     -s "$(pwd)" \
-    -c "make publish-aws-s3"
+    -c "make publish-aws-s3 publish-bintray-debian publish-bintray-redhat"
 else
   ./scripts/build/check-dependency.sh make
   make publish-aws-s3
